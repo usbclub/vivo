@@ -1,5 +1,6 @@
 "use client";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { Button } from "@worldcoin/mini-apps-ui-kit-react";
 
 export const SignIn = () => {
   const { data: session } = useSession();
@@ -13,6 +14,15 @@ export const SignIn = () => {
   } else {
     return (
       <>
+        <Button
+          onClick={function Ki(){}}
+          radius="md"
+          size="md"
+          variant="primary"
+        >
+          Button
+        </Button>
+
         Not signed in <br />
         <button onClick={() => signIn()}>Sign in</button>
       </>

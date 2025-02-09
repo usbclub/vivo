@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -31,3 +33,28 @@ body {
     text-wrap: balance;
   }
 }
+
+
+  @keyframes fadeMoveLeft {
+    0% { opacity: 1; transform: translateX(0); }
+    50% { opacity: 0; transform: translateX(-8px); }
+    85% { opacity: 0; transform: translateX(-8px); }
+    86% { opacity: 0; transform: translateX(-3px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeMoveRight {
+    0% { opacity: 1; transform: translateX(0); }
+    50% { opacity: 0; transform: translateX(8px); }
+    85% { opacity: 0; transform: translateX(8px); }
+    86% { opacity: 0; transform: translateX(3px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+
+  /* Delayed sequence for staggered animation */
+  #arrow-left-2 { animation: fadeMoveLeft 2.25s ease-in-out infinite; }
+  #arrow-left-1 { animation: fadeMoveLeft 2.25s ease-in-out infinite 0.2s; }
+
+  #arrow-right-2 { animation: fadeMoveRight 2.25s ease-in-out infinite; }
+  #arrow-right-1 { animation: fadeMoveRight 2.25s ease-in-out infinite 0.2s; }

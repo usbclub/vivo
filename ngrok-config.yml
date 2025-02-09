@@ -1,0 +1,11 @@
+version: "3"
+agent:
+    authtoken: 2ski7J7WWoDlUtdjeTV0ka6g4lC_3mzp3vwkv9X91iwE5rYf9
+tunnels:
+  web:
+    proto: http
+    addr: 3000
+  redis:
+    proto: tcp
+    addr: 6379
+

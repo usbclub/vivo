@@ -15,9 +15,9 @@ export type VerifyCommandInput = {
 };
 
 const verifyPayload: VerifyCommandInput = {
-  action: "test-action", // This is your action ID from the Developer Portal
+  action: "verify", // This is your action ID from the Developer Portal
   signal: "",
-  verification_level: VerificationLevel.Orb, // Orb | Device
+  verification_level: VerificationLevel.Device, // Orb | Device
 };
 
 export const VerifyBlock = () => {
@@ -61,6 +61,7 @@ export const VerifyBlock = () => {
     if (verifyResponseJson.status === 200) {
       console.log("Verification success!");
       console.log(finalPayload);
+      // const worldIdUser = await MiniKit.getUserByAddress(MiniKit.walletAddress)
     }
 
     setHandleVerifyResponse(verifyResponseJson);
